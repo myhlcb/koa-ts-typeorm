@@ -1,8 +1,8 @@
 node_modules
 dist
-tslint.json
-.vscode/
+.vscode
 .gitignore
-.dockerfile
 .gitlab-ci.*
+Dockerfile
+README.*
 *.log
