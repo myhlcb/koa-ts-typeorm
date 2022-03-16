@@ -6,6 +6,6 @@ import upload from '../middleware/multer';
 export default function() {
   const router = new Router();
   router.get('/hello', homeController.hello);
-  router.post('/convert', upload.any(), convertController.convertToPng);
+  router.post('/convertToPng', upload.any(), convertController.convertToPng);
   return router;
-}
+} 

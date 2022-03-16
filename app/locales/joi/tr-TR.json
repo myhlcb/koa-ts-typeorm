@@ -1,0 +1,148 @@
+{
+  "root": "value",
+  "key": "\"{{!label}}\" ",
+  "messages": {
+    "wrapArrays": true
+  },
+  "any": {
+    "unknown": "kullanılamaz",
+    "invalid": "geçersiz bir değer içeriyor",
+    "empty": "boş bırakılamaz",
+    "required": "zorunlu alandır",
+    "allowOnly": "{{valids}} değerlerinden biri olmalı",
+    "default": "varsayılan metod çalışırken bir hata oluştu"
+  },
+  "alternatives": {
+    "base": "izin verilen alternatiflerden biri değil"
+  },
+  "array": {
+    "base": "bir dizi olmalı",
+    "includes": "{{pos}} numaralı eleman izin verilen tiplere uymuyor",
+    "includesSingle": "\"{{!label}}\" izin verilen tiplerden birine uymuyor",
+    "includesOne": "{{pos}} numaralı eleman hatalı, çünkü {{reason}}",
+    "includesOneSingle": "\"{{!label}}\" değerinde hata mevcut, çünkü {{reason}}",
+    "includesRequiredUnknowns": "şu zorunlu değeri içermeli: {{unknownMisses}}",
+    "includesRequiredKnowns": "şu değeri içermeli: {{knownMisses}}",
+    "includesRequiredBoth": "şu zorunlu değerleri içermeli: {{knownMisses}} ve {{unknownMisses}}",
+    "excludes": "için {{pos}} numaralı eleman izin verilmeyen değer içeriyor",
+    "excludesSingle": "\"{{!label}}\" izin verilmeyen bir değer içeriyor",
+    "min": "en az {{limit}} adet eleman içermeli",
+    "max": "en fazla {{limit}} eleman içerebilir",
+    "length": "tam olarak {{limit}} adet eleman içermeli",
+    "ordered": "{{pos}} numaralı eleman hatalı, çünkü {{reason}}",
+    "orderedLength": "{{pos}} numaralı elemen hatalı, çünkü dizi en fazla {{limit}} adet eleman içerebilir",
+    "ref": "references \"{{ref}}\" which is not a positive integer",
+    "sparse": "dizi boşluk içermemeli",
+    "unique": "{{pos}} numaralı eleman değeri dizide daha önce mevcut"
+  },
+  "boolean": {
+    "base": "doğru/yanlış olmalı"
+  },
+  "binary": {
+    "base": "buffer veya string olmalı",
+    "min": "en az {{limit}} byte olmalı",
+    "max": "en fazla {{limit}} byte olabilir",
+    "length": "tam olarak {{limit}} byte olmalı"
+  },
+  "date": {
+    "base": "milisaniye değeri veya geçerli bir tarih olmalı",
+    "format": "must be a string with one of the following formats {{format}}",
+    "strict": "must be a valid date",
+    "min": "\"{{limit}}\" veya daha büyük bir değer olmalı",
+    "max": "\"{{limit}}\" veya daha küçük bir değer olmalı",
+    "isoDate": "geçerli bir ISO 8601 formatında tarih olmalı",
+    "timestamp": {
+      "javascript": "must be a valid timestamp or number of milliseconds",
+      "unix": "must be a valid timestamp or number of seconds"
+    },
+    "ref": "tarih olmayan bir referans içeriyor (\"{{ref}}\")"
+  },
+  "function": {
+    "base": "bir fonksiyon olmalı",
+    "arity": "must have an arity of {{n}}",
+    "minArity": "must have an arity greater or equal to {{n}}",
+    "maxArity": "must have an arity lesser or equal to {{n}}",
+    "ref": "must be a Joi reference",
+    "class": "must be a class"
+  },
+  "lazy": {
+    "base": "!!schema error: lazy schema must be set",
+    "schema": "!!schema error: lazy schema function must return a schema"
+  },
+  "object": {
+    "base": "nesne olmalı",
+    "child": "alt \"{{!label}}\" anahtarı hatalı, çünkü {{reason}}",
+    "min": "en az {{limit}} alt değer içermeli",
+    "max": "en fazla {{limit}} alt değer içerebilir",
+    "length": "tam olarak {{limit}} alt değer içermeli",
+    "allowUnknown": "izin verilmeyen bir değer",
+    "with": "!!\"{{mainWithLabel}}\" için \"{{peerWithLabel}}\" anahtarı da olmalı",
+    "without": "!!\"{{mainWithLabel}}\" için \"{{peerWithLabel}}\" anahtarı kullanılamaz",
+    "missing": "en azından {{peersWithLabels}} anahtarlarından birini içermeli",
+    "xor": "için {{peersWithLabels}} anahtarları ile çakışma var (xor)",
+    "or": "{{peersWithLabels}} anahtarlarından birini içermeli",
+    "and": "için {{presentWithLabels}} anahtarı kullanılmış ancak onun gerektirdiği {{missingWithLabels}} anahtarı kullanılmamış",
+    "nand": "!!\"{{mainWithLabel}}\" ve {{peersWithLabels}} bir arada kullanılamaz",
+    "assert": "!!\"{{ref}}\" hatalı, çünkü \"{{ref}}\" {{message}}",
+    "rename": {
+      "multiple": "için \"{{from}}\" anahtarının ismi değiştirilemez, çünkü çoklu isim değiştirilemez ve başka bir anahtarın ismi \"{{to}}\" olarak değiştirilmiş",
+      "override": "için \"{{from}}\" anahtarının ismi değiştirilemez, çünkü üzerine yazılamaz ve \"{{to}}\" zaten mevcut",
+      "regex": {
+        "multiple": "için \"{{from}}\" anahtarının ismi değiştirilemez, çünkü çoklu isim değiştirilemez ve başka bir anahtarın ismi \"{{to}}\" olarak değiştirilmiş",
+        "override": "için \"{{from}}\" anahtarının ismi değiştirilemez, çünkü üzerine yazılamaz ve \"{{to}}\" zaten mevcut"
+      }
+    },
+    "type": "\"{{type}}\" türünde olmalı",
+    "schema": "must be a Joi instance"
+  },
+  "number": {
+    "base": "bir sayı olmalı",
+    "min": "en fazla {{limit}} olabilir",
+    "max": "en az {{limit}} olabilir",
+    "less": "{{limit}} değerinden daha düşük olmalı",
+    "greater": "{{limit}} değerinden daha yüksek olmalı",
+    "float": "ondalık sayı olmalı",
+    "integer": "tam sayı olmalı",
+    "negative": "negatif bir sayı olmalı",
+    "positive": "pozitif bir sayı olmalı",
+    "precision": "en fazla {{limit}} adet ondalık basamak içerebilir",
+    "ref": "sayı olmayan bir referans içeriyor (\"{{ref}}\")",
+    "multiple": "{{multiple}} veya katlarından biri olmalı",
+    "port": "must be a valid port",
+    "map": "must be a number or one of {{enums}}"
+  },
+  "string": {
+    "base": "karakter dizisi (string) olmalı",
+    "min": "en az {{limit}} karakter olmalı",
+    "max": "en fazla {{limit}} karakter olabilir",
+    "length": "tam olarak {{limit}} karakter olmalı",
+    "alphanum": "sadece harf ve rakam içerebilir",
+    "token": "sadece harf, rakam ve alt çizgi (_) içerebilir",
+    "regex": {
+      "base": "için \"{{!value}}\" değeri istene kalıba uygun değil: {{pattern}}",
+      "name": "için \"{{!value}}\" değeri {{name}} kalıbına uygun değil",
+      "invert": {
+        "base": "için \"{{!value}}\" değeri istene kalıba uygun değil: {{pattern}}",
+        "name": "için \"{{!value}}\" değeri {{name}} kalıbına uygun değil"
+      }
+    },
+    "email": "e-posta adresi olmalı",
+    "uri": "geçerli bir uri adresi olmalı",
+    "uriRelativeOnly": "must be a valid relative uri",
+    "uriCustomScheme": "{{scheme}} kalıbına uygun bir uri değeri olmalı",
+    "isoDate": "geçerli bir ISO 8601 tarihi olmalı",
+    "guid": "geçerli bir GUID olmalı",
+    "hex": "sadece hexadecimal karakterler içerebilir",
+    "hexAlign": "hex decoded representation must be byte aligned",
+    "base64": "must be a valid base64 string",
+    "hostname": "geçerli bir alan adı (hostname) olmalı",
+    "normalize": "must be unicode normalized in the {{form}} form",
+    "lowercase": "sadece küçük harfler içerebilir",
+    "uppercase": "sadece büyük harfler içerebilir",
+    "trim": "başında ve sonunda boşluk içeremez",
+    "creditCard": "kredi kartı numarası olmalı",
+    "ref": "sayı olmayan bir referans içeriyor (\"{{ref}}\")",
+    "ip": "CIDR {{cidr}} içeren geçerli bir IP adresi olmalı",
+    "ipVersion": "CIDR {{cidr}} içeren {{version}} versiyonlarından bir IP adresi olmalı"
+  }
+}

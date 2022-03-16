@@ -1,0 +1,148 @@
+{
+  "root": "數據",
+  "key": "\"{{!label}}\" ",
+  "messages": {
+    "wrapArrays": true
+  },
+  "any": {
+    "unknown": "不被允許",
+    "invalid": "不是可選值",
+    "empty": "不允許為空",
+    "required": "是必須的",
+    "allowOnly": "必須是{{valids}}之一",
+    "default": "運行默認函數時出錯"
+  },
+  "alternatives": {
+    "base": "不能匹配上任何可選項"
+  },
+  "array": {
+    "base": "必須是數組",
+    "includes": "位置{{pos}}不能匹配上任何可選項",
+    "includesSingle": "項目\"{{!label}}\"不能匹配上任何可選項",
+    "includesOne": "位置{{pos}}失敗原因:{{reason}}",
+    "includesOneSingle": "項目\"{{!label}}\"失敗原因:{{reason}}",
+    "includesRequiredUnknowns": "不包含{{unknownMisses}}個必選項",
+    "includesRequiredKnowns": "不包含{{knownMisses}}等必選項",
+    "includesRequiredBoth": "不包含{{knownMisses}}及{{unknownMisses}}個必選項",
+    "excludes": "位置{{pos}}包含無效項",
+    "excludesSingle": "項目\"{{!label}}\"包含無效項",
+    "min": "必須至少包含{{limit}}個成員",
+    "max": "必須最多包含{{limit}}個成員",
+    "length": "必須正好包含{{limit}}個成員",
+    "ordered": "位置{{pos}}失敗原因:{{reason}}",
+    "orderedLength": "位置{{pos}}最多包含{{limit}}個成員",
+    "ref": "引用\"{{ref}}\"不是一個有效的位置",
+    "sparse": "不能包含未定義成員",
+    "unique": "位置{{pos}}是重複的成員"
+  },
+  "boolean": {
+    "base": "必須是bool值"
+  },
+  "binary": {
+    "base": "必須是一段內容",
+    "min": "必須至少包含{{limit}}個字節",
+    "max": "必須最多包含{{limit}}個字節",
+    "length": "必須正好包含{{limit}}個字節"
+  },
+  "date": {
+    "base": "必須是毫秒數或者有效的時間字符串",
+    "format": "必須是以下格式的字符串{{format}}",
+    "strict": "必須是有效的時間",
+    "min": "必須晚於\"{{limit}}\"",
+    "max": "必須早於\"{{limit}}\"",
+    "isoDate": "必須是有效的\"ISO 8601\"格式的時間",
+    "timestamp": {
+      "javascript": "必須是有效的時間戳或者毫秒數",
+      "unix": "必須是有效的時間戳或者秒數"
+    },
+    "ref": "引用\"{{ref}}\"不是有效的時間"
+  },
+  "function": {
+    "base": "必須是函數",
+    "arity": "必須正好擁有{{n}}個參數",
+    "minArity": "必須至少擁有{{n}}個參數",
+    "maxArity": "必須最多擁有{{n}}個參數",
+    "ref": "必須是有效的引用",
+    "class": "必須是對像類"
+  },
+  "lazy": {
+    "base": "!!模式錯誤：必須設置惰性模式",
+    "schema": "!!模式錯誤：惰性模式函數必須返回模式"
+  },
+  "object": {
+    "base": "必須是一個對象",
+    "child": "!!失敗原因: {{reason}}",
+    "min": "必須至少包含{{limit}}個子對象",
+    "max": "必須最多包含{{limit}}個子對象",
+    "length": "必須正好包含{{limit}}個子對象",
+    "allowUnknown": "!!成員\"{{!child}}\"不被允許",
+    "with": "!!\"{{mainWithLabel}}\"沒有對應的\"{{peerWithLabel}}\"",
+    "without": "!!\"{{mainWithLabel}}\"不能有對應的\"{{peerWithLabel}}\"",
+    "missing": "沒有對應的{{peerWithLabels}}",
+    "xor": "和{{peerWithLabels}}有衝突",
+    "or": "需要有對應的{{peersWithLabels}}",
+    "and": "當前{{presentWithLabels}}需要有對應的{{missingWithLabels}}",
+    "nand": "!!\"{{mainWithLabel}}\"和{{peersWithLabels}}有衝突",
+    "assert": "!!\"{{ref}}\"失敗原因:{{message}}",
+    "rename": {
+      "multiple": "重命名\"{{from}}\"失敗因為:\"{{to}}\"已經被佔用",
+      "override": "重命名\"{{from}}\"失敗因為:\"{{to}}\"已經存在",
+      "regex": {
+        "multiple": "重命名\"{{from}}\"失敗因為:\"{{to}}\"已經被佔用",
+        "override": "重命名\"{{from}}\"失敗因為:\"{{to}}\"已經存在"
+      }
+    },
+    "type": "必須是\"{{type}}\"類型",
+    "schema": "必須是一個模式"
+  },
+  "number": {
+    "base": "必須是數值",
+    "min": "必須大於或等於{{limit}}",
+    "max": "必須小於或等於{{limit}}",
+    "less": "必須小於{{limit}}",
+    "greater": "必須大於{{limit}}",
+    "float": "必須是小數",
+    "integer": "必須是整數",
+    "negative": "必須是負數",
+    "positive": "必須是正數",
+    "precision": "必須有{{limit}}位小數",
+    "ref": "引用\"{{ref}}\"不是數字",
+    "multiple": "必須是{{multiple}}的整數倍",
+    "port": "必須是有效的端口號",
+    "map": "必須是{{enums}}之一"
+  },
+  "string": {
+    "base": "必須是字符串",
+    "min": "必須最少有{{limit}}個字節",
+    "max": "必須最多有{{limit}}個字節",
+    "length": "必須正好有{{limit}}個字節",
+    "alphanum": "只能包含字符和數字",
+    "token": "只能包含字符數字和下劃線",
+    "regex": {
+      "base": "不能匹配上規則{{pattern}}",
+      "name": "不能匹配上規則{{name}}",
+      "invert": {
+        "base": "不能匹配上規則{{pattern}}",
+        "name": "不能匹配上規則{{name}}"
+      }
+    },
+    "email": "必須是合法的郵箱地址",
+    "uri": "必須是合法的網絡地址",
+    "uriRelativeOnly": "必須是相對路徑",
+    "uriCustomScheme": "必須符合規則{{scheme}}",
+    "isoDate": "必須是ISO 8601日期格式",
+    "guid": "必須是有效的GUID",
+    "hex": "必須是十六進制格式",
+    "hexAlign": "十六進制必須按字節對齊",
+    "base64": "必須是有效的base64格式",
+    "hostname": "必須是有效的網絡名稱",
+    "normalize": "必須是{{form}}格式內容",
+    "lowercase": "只能包含小寫字符",
+    "uppercase": "只能包含大寫字符",
+    "trim": "前後不能有空白",
+    "creditCard": "必須是有效的卡號",
+    "ref": "引用\"{{ref}}\"不是數字",
+    "ip": "必須是有效的{{cidr}}類型的ip地址",
+    "ipVersion": "必須是有效的{{cidr}}類型的{{version}}ip地址"
+  }
+}
