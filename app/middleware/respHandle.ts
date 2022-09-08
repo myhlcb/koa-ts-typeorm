@@ -33,7 +33,6 @@ export default () => {
           ctx.body = { success: false, error };
         }
       }).then(() => {
-        console.log(Buffer.isBuffer(ctx.body), 444444)
         if (![301, 302].includes(ctx.status)) {
           const res: any = ctx.body;
           if (res && res.raw) {

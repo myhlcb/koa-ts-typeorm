@@ -30,10 +30,12 @@
     "mammoth": "^1.4.21",
     "mime-types": "^2.1.35",
     "moment": "^2.29.1",
+    "mysql": "^2.18.1",
     "path": "^0.12.7",
     "puppeteer": "^13.5.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
+    "typeorm": "^0.3.9",
     "winston": "^3.6.0",
     "winston-daily-rotate-file": "^4.6.1",
     "xlsx": "^0.18.3"

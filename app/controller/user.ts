@@ -1,6 +1,6 @@
 import { Context } from 'koa';
-import {User} from '../entities/user'
+import { User } from '../entities/user';
 export async function users(ctx: Context) {
-  const list = await User.find()
-  ctx.body = {list};
+  const list = await User.find();
+  ctx.body = { list };
 }
